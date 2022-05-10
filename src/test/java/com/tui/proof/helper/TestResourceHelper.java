@@ -17,7 +17,6 @@ public class TestResourceHelper {
 
     public static <T> T readObject(String file, Class<T> objectType) throws Exception {
         return OBJECT_MAPPER.readValue(readFileAsString(file), objectType);
-
     }
 
     public static InputStream readInputStream (String file) throws Exception {
@@ -30,8 +29,7 @@ public class TestResourceHelper {
     }
 
     public static String readFileAsString (String file) throws Exception {
-
-            return new String (Files.readAllBytes (toPath (file)));
+        return new String (Files.readAllBytes (toPath (file)));
     }
 
     static {

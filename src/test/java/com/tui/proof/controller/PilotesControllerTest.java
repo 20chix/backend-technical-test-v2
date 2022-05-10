@@ -39,7 +39,7 @@ class PilotesControllerTest {
     private static WireMockServer wireMockServer;
 
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
-
+    
     private static final String SLASH = "/";
     private static final String PILOTES_PATH = "/api/v1/pilotes";
     private static final String PILOTES_ORDER_PATH = "/api/v1/pilotes/order";
@@ -192,7 +192,6 @@ class PilotesControllerTest {
                 .contains("Email must be valid");
 
     }
-
 
     @Test
     public void givenASearchRequestOnPilotesOrdersDetailWithoutAuth_shouldFailWith401() {

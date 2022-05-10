@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
+import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @Service
 public class PilotesService {
@@ -48,7 +49,7 @@ public class PilotesService {
                     }
                     return  ResponseEntity.status(BAD_REQUEST).body("Unable to update order after 5 minutes");
                 })
-                .orElseGet(() ->ResponseEntity.status(BAD_REQUEST).body("Unable to order number: " + orderNumber));
+                .orElseGet(() ->ResponseEntity.status(NOT_FOUND).body("Unable to find order number: " + orderNumber));
     }
 
 
