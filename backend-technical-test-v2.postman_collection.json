@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "bda882eb-9943-4bf2-bbaf-ea8b3d75bfd4",
+		"name": "TUI Musement Backend test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add new pilotes order",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numberOfPilotes\": \"10\",\r\n  \"street\": \"Buckingham\",\r\n  \"postcode\": \"SW1A 1AA\",\r\n  \"city\": \"London\",\r\n  \"country\": \"United Kingdom\",\r\n  \"firstName\": \"Hadi\",\r\n  \"lastName\": \"Elmekawi\",\r\n  \"telephone\": \"+447450231599\",\r\n  \"email\": \"hadi.elme92@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/pilotes/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"pilotes",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all pilotes",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/v1/pilotes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"pilotes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search pilotes order details",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/v1/pilotes/search?searchParameter=Palace",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"pilotes",
+						"search"
+					],
+					"query": [
+						{
+							"key": "searchParameter",
+							"value": "Palace"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update pilotes order",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"orderNumber\": 2,\r\n        \"numberOfPilotes\": 10,\r\n        \"street\": \"Buckingaaaaaaaaaaaaham\",\r\n        \"postcode\": \"SW1A 1AA\",\r\n        \"city\": \"London\",\r\n        \"country\": \"United Kingdom\",\r\n        \"firstName\": \"Hadi\",\r\n        \"lastName\": \"Elmekawi\",\r\n        \"telephone\": \"+447450231599\",\r\n        \"email\": \"hadi.elme92@gmail.com\",\r\n        \"createdAt\": \"2022-05-10T20:46:15.497843\",\r\n        \"orderTotal\": 13.3,\r\n        \"canUpdateOrder\": true,\r\n        \"orderAgeInMinutes\": 1\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/pilotes/order/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"pilotes",
+						"order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

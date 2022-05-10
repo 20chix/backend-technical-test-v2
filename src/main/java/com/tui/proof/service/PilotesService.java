@@ -48,7 +48,7 @@ public class PilotesService {
                     }
                     return  ResponseEntity.status(BAD_REQUEST).body("Unable to update order after 5 minutes");
                 })
-                .orElseGet(() -> ResponseEntity.ok(pilotesRepository.save(newPilotes)));
+                .orElseGet(() ->ResponseEntity.status(BAD_REQUEST).body("Unable to order number: " + orderNumber));
     }
 
 
