@@ -1,0 +1,9 @@
+version: '2'
+services:
+  message-server:
+    container_name: backend-technical-test
+    build:
+      dockerfile: /Dockerfile
+    image: backend-technical-test:latest
+    ports:
+      - 8081:8081

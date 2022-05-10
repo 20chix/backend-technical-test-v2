@@ -1,87 +1,29 @@
-###############
-# Directories
-###############
-bin/
-gen/
+CVS/
+*.iml
+.idea/
 target/
-.sonar/
+build/
 
-###############
-# Java class files
-###############
+#Compiled class file *.class
 *.class
 
-###############
-# Package Files
-###############
+#Log file
+*.log
+
+#BlueJ files
+*.ctxt
+
+# Mobile Tools for
+.mtj.tmp/
+
+#Package Piles #
 *.jar
 *.war
+*.nar
 *.ear
-*.db
+*.zip
+.tar.gz
+*.rar
 
-###############
-# Windows image file caches
-###############
-Thumbs.db
-
-
-###############
-# Thumbnails
-###############
-._*
-
-###############
-# OS Files
-###############
-.DS_Store
-
-######################
-# Eclipse
-######################
-*.pydevproject
-.metadata
-.project
-bin/**
-tmp/**
-tmp/**/*
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.classpath
-.settings/
-.loadpath
-/src/main/resources/rebel.xml
-# External tool builders
-.externalToolBuilders/
-
-######################
-# IntelliJ Idea
-######################
-idea/
-/out/
-build/
-*.iml
-*.iws
-*.ipr
-.idea
-.gradle
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/dictionaries
-.idea/vcs.xml
-.idea/jsLibraryMappings.xml
-.idea/dataSources.ids
-.idea/dataSources.xml
-.idea/dataSources.local.xml
-.idea/sqlDataSources.xml
-.idea/dynamic.xml
-.idea/uiDesigner.xml
-.idea/gradle.xml
-.idea/libraries
-.idea/mongoSettings.xml
-.idea_modules/
-atlassian-ide-plugin.xml
-
-*/.factorypath
+#virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
